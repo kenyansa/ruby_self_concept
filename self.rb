@@ -2,7 +2,7 @@ require 'pry'
 
 class Coffee
     attr_reader :name
-    attr_accessor :price
+    attr_accessor :price, :ingredients
 
     def initialize(name, price = 4.5)
         @price= price
@@ -11,7 +11,8 @@ class Coffee
     end
 
     def add_ingredients(ingredients)
-
+        self.price += 0.50
+        self.ingredients << ingredients
     end
 end
 c1 = Coffee.new("rose", 3.5)
