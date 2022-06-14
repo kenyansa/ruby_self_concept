@@ -46,9 +46,9 @@ User.new(newest_twitter_user)
 class User
   attr_accessor :name, :user_name, :age, :location, :bio
 
-  def initialize(attributes)
-    attributes.each do |key, value| 
-      self.send("#{key}=", value)
+  def initialize(attributes) #unspecified attributes
+    attributes.each do |key, value| #iterating over each key-value pair
+      self.send("#{key}=", value) #the ruby #send method then calls the method name that is the key’s name, with an argument of the value.
     end
   end
 end
