@@ -12,4 +12,11 @@ def happy_birthday(name, current_age)
   puts "You are now #{current_age} years old"
 end
 
-happy_birthday("Justine Kenyansa", 26)
+happy_birthday("Justine Kenyansa", 27)
+
+#using keyword arguments
+def happy_birthday(name: "Justine Kenyansa", current_age: 27)
+    puts "happy birthday, #{name}"
+    current_age += 1
+    puts "You are now #{current_age} years old"
+end
