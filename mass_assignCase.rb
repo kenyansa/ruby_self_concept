@@ -18,3 +18,13 @@ twitter_user = {
 }
 #we now use the hash to instantiate a new instance of our own User class:
 sophie = User.new(twitter_user)
+
+#Twitter may change its data for API:
+new_twitter_user = {
+  name: "Sophie", 
+  user_name: "sm_debenedetto", 
+  location: "NY, NY"
+}
+#creating new Users using the old User class will throw an error:
+User.new(new_twitter_user)
+# => ArgumentError: missing keyword: age
