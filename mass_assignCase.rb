@@ -40,3 +40,15 @@ newest_twitter_user = {
 #it throws an error too:
 User.new(newest_twitter_user)
 # => ArgumentError: unknown keyword: bio
+
+#at this point, mass assignment comes in, as an abstract way 
+#code refactored with mass assign:
+class User
+  attr_accessor :name, :user_name, :age, :location, :bio
+
+  def initialize(attributes)
+    attributes.each do |key, value| 
+      self.send("#{key}=", value)
+    end
+  end
+end
