@@ -28,3 +28,15 @@ new_twitter_user = {
 #creating new Users using the old User class will throw an error:
 User.new(new_twitter_user)
 # => ArgumentError: missing keyword: age
+
+#another hash case
+newest_twitter_user = {
+  name: "Sophie", 
+  user_name: "sm_debenedetto", 
+  age: 26, 
+  location: "NY, NY", 
+  bio: "I'm a programmer living in NY!"
+}
+#it throws an error too:
+User.new(newest_twitter_user)
+# => ArgumentError: unknown keyword: bio
