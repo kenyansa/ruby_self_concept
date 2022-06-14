@@ -20,3 +20,9 @@ def happy_birthday(name: "Justine Kenyansa", current_age: 27)
     current_age += 1
     puts "You are now #{current_age} years old"
 end
+#code refactored
+def happy_birthday(name:, current_age:)
+  puts "Happy Birthday, #{name}"
+  current_age += 1
+  puts "You are now #{current_age} years old"
+end
