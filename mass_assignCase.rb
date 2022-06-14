@@ -52,3 +52,14 @@ class User
     end
   end
 end
+#with setters and getters:
+class User
+  def initialize(attributes)
+    attributes.each do |key, value|
+      # create a getter and setter by calling the attr_accessor method
+      self.class.attr_accessor(key)
+      self.send("#{key}=", value)
+    end
+  end
+end
+#By making this one small change, we can now get and set every attribute on an object instantiated from User
